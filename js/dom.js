@@ -1,32 +1,32 @@
 console.log("Javascript - лучший язык программирования!");
 window.addEventListener("DOMContentLoaded", function () {
   
-  //1. Поменяйте приветствие с "Привет Всем!" на "Привет Виталий Валентинович!".
+  // Change the greeting "hello Everyone!" to "Hello, Виталий Валентинович!"
   setTimeout(() => {
     let hello = document.querySelector("#greeting");
     hello.textContent = 'Привет, Виталий Валентинович!';
   }, 3000);
 
-//2. Установите фоновый цвет для каждого `<li>` на `yellow`.
+// Set <yellow> backgound color for every <li>
   setTimeout(() => {
     document.querySelector("#essentials").style.backgroundColor = "yellow";
   }, 3200);
 
-//3. Создайте тег изображения, установите его атрибут `src` на`http://49.media.tumblr.com/tumblr_m6qt1rjPSz1rxjzkho1_500.gif`, и вложите в div с идентификатором `#greeting`.
+//Create picture tag and set attribute src and inclose it in div with identification #greeting
   setTimeout(() => {
     let pictureNew = document.createElement("img");
     pictureNew.setAttribute("src", "http://49.media.tumblr.com/tumblr_m6qt1rjPSz1rxjzkho1_500.gif");
     document.querySelector('#greeting').appendChild(pictureNew);
   }, 3400);
 
-//4. Создайте и добавьте ul элемент в конец  body с классом "todo-items"
+// Create and add ul element at the end of the body with class "todo-items"
   setTimeout(() => {
     let ulNew = document.createElement("ul");
     ulNew.classList.add("todo-items");
     document.querySelector("body").appendChild(ulNew);
   }, 3600);
   
-//5. Пройдитесь по массиву `['приготовить кофе','съесть салатик','поменять подгузник ребёнку','поехать на работу']` и создайте тег li для каждого элемента, например: `<li>приготовить кофе</li>`
+// Go trough the array and create for each element tag li 
     let arrayNew = [];
   setTimeout(() => {
     let list = ['приготовить кофе', 'съесть салатик', 'поменять подгузник ребёнку', 'поехать на работу'];
@@ -37,7 +37,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   }, 3800);
 
-//6. Добавьте каждый созданный ранее тег li в вашу конструкцию ul с классом "todo-items".
+// Add tag li for each element created before in your construction ul with class "todo-items".
   setTimeout(() => {
     let liInClass = document.querySelector(".todo-items");
     for (let i = 0; i < arrayNew.length; i++) {
@@ -45,7 +45,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   }, 3800);
 
- // 7. Добавьте класс `selected` к `<li>` при щелчке по нём. Удалите его из любых других`li`.
+ // Add class `selected` to `<li>` after clicking it. Delete it from eny other 'li' elements.
   setTimeout(() => {
     let classNew = document.querySelector("#essentials")
     classNew.addEventListener("click", function (event) {
@@ -71,6 +71,7 @@ window.addEventListener("DOMContentLoaded", function () {
   }, 4000);
 
  // 8. Измените изображение, чтобы оно было последним выбранным продуктом питания.
+ // Change the picture so that it would be the last selected food
   setTimeout(() => {
      let change = document.querySelector(".todo-items")
      change.addEventListener("click", function (e) {
@@ -83,7 +84,7 @@ window.addEventListener("DOMContentLoaded", function () {
       });
     }, 4000);
 
-//9. Когда на серый div наводится указатель мыши, он удаляется из DOM. 
+// When the pointer is on the grey div it will be deleted from DOM.
   setTimeout(() => {
     let deleteNow  = document.querySelector('#ghosting');
     deleteNow.addEventListener("mouseover", removal, false);
@@ -93,7 +94,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   }, 4200);
 
-//10. Когда на оранжевый div наводится указатель мыши, его ширина удваивается. Когда мы уходим за пределы div, ширина возвращается к своему первоначальному размеру.
+//When the pointer is on the orange div its width will be doubled. When we leave div boundaries its width come back to the original size.
   setTimeout(() => {
     let increase = document.querySelector("#resize");
     let size = increase.clientWidth;
@@ -105,7 +106,7 @@ window.addEventListener("DOMContentLoaded", function () {
         increase.style.width = size + "px" }, false);
   }, 4200);
 
-//11. Когда  кнопка Reset нажата - удалите класс `selected` из каждого `<li>` и измените изображение на `panic.jpg`.
+// When the button is active - delete class `selected` in every `<li>` element and change the picture to `panic.jpg`.
   setTimeout(() => {
     let reset = document.querySelector("#reset")
     reset.addEventListener("click", delNew, false);
@@ -117,7 +118,7 @@ window.addEventListener("DOMContentLoaded", function () {
   }
   }, 4200);
 
-  //12. При нажатии клавиши 1, 2, 3, 4, 5, 6, 7, 8, 9 или 0 на странице появляется сообщение «Я НЕНАВИЖУ ЧИСЛААААА!»
+  // When we enter key 1, 2, 3, 4, 5, 6, 7, 8, 9 or 0 on page show the message "I HATE NUMBEEERS!"
   setTimeout(() => {
     window.addEventListener("keypress", nomderNot, false);
     function nomderNot (e) {
@@ -126,5 +127,4 @@ window.addEventListener("DOMContentLoaded", function () {
       }
     }
   }, 4200);
-
 })
