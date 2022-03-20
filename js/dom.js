@@ -70,7 +70,6 @@ window.addEventListener("DOMContentLoaded", function () {
   });
   }, 4000);
 
- // 8. Измените изображение, чтобы оно было последним выбранным продуктом питания.
  // Change the picture so that it would be the last selected food
   setTimeout(() => {
      let change = document.querySelector(".todo-items")
